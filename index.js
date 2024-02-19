@@ -44,6 +44,7 @@ app.post("/signup", async (req, res) => {
   console.log(req.body);
   const { email } = req.body;
 
+ 
   userModel.findOne({ email: email }, (err, result) => {
      console.log(result);
     console.log(err);
@@ -56,6 +57,7 @@ app.post("/signup", async (req, res) => {
     }
   });
 });
+
 
 //api login
 app.post("/login", (req, res) => {
